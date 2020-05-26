@@ -1,0 +1,6 @@
+output_file_path = "../slate/source/index.html.md"
+base_file_path = "templates/base.template.md"
+
+[[readmes]]
+url = "https://raw.githubusercontent.com/SKOOTUK/endpoint-send_contacts/master/"
+path = "README.md"
