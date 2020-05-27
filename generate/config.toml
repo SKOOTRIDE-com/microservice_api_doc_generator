@@ -1,6 +1,6 @@
 output_file_path = "../slate/source/index.html.md"
 base_file_path = "templates/base.template.md"
 
-[[readmes]]
+[[repos]]
 url = "https://raw.githubusercontent.com/SKOOTUK/endpoint-send_contacts/doc-gen-trial/"
 path = "README.md"

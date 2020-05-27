@@ -19,7 +19,7 @@ def generate_slate_readme(relative_config_path):
     write_to_file(
         output_file_path,
         config['base_file_path'],
-        config['readmes']
+        config['repos']
     )
 
 
