@@ -1,9 +1,11 @@
-import requests
-import toml
+from os import environ
 from pathlib import Path
 
+import requests
+import toml
 
-GITHUB_PERSONAL_ACCESS_TOKEN = None  # TODO env variable
+
+GITHUB_PERSONAL_ACCESS_TOKEN = environ['GITHUB_PERSONAL_ACCESS_TOKEN']
 DEFAULT_SEPARATOR = '\n## '
 DEFAULT_IDENTIFIER = 'Endpoints'
 
@@ -33,10 +35,10 @@ def write_to_file(output_path, base_path, repos):
             # TODO error handling and format func
 
             separator = repo.get('section_separator', DEFAULT_SEPARATOR)
-            sections = [sect.strip() for sect in content.split(separator)]
+            sects = [sect.strip() for sect in content.split(separator)]
 
             identifier = repo.get('endpoints_identifier', DEFAULT_IDENTIFIER)
-            endpoints = list(filter(lambda x: x.startswith(identifier), sections))
+            endpoints = list(filter(lambda x: x.startswith(identifier), sects))
 
             assert len(endpoints) == 1
 
