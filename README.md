@@ -40,8 +40,11 @@ This file is then used by [Slate](https://github.com/slatedocs/slate) to build a
         - name: Trigger doc generation CircleCI job
             uses: zivkaziv/circleci-trigger-github-action@V1.0
             with:
-            token: ${{ secrets.CIRCLE_CI_TOKEN }}
+            token: ${{ secrets.circleci_api_token }}
             org: SKOOTUK
             repo: microservice_api_doc_generator
             branch: master
     ```
+
+* Get repo added to `circleci_api_token` on Github organisation secrets
+* Get deploy key added to repo and CircleCI project SSH keys.

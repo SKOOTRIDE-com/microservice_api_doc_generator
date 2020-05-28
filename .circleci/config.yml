@@ -1,7 +1,10 @@
 version: 2.1
 
+orbs:
+  gcp-gcr: circleci/gcp-gcr@0.7.1
+
 jobs:
-  build:
+  generate-documentation:
     docker:
       - image: circleci/python:3.8.3
     steps:
@@ -9,27 +12,46 @@ jobs:
       - run:
           name: Setup VirtualEnv for doc generation
           command: |
-            echo 'export TAG=0.1.${CIRCLE_BUILD_NUM}' >> $BASH_ENV
-            echo 'export IMAGE_NAME=api_doc_generator' >> $BASH_ENV 
-            virtualenv generator
-            . generator/bin/activate
+            virtualenv .venv_gen
+            . .venv_gen/bin/activate
             pip install --no-cache-dir -r generate/requirements.txt
       - run:
           name: Generate documentation
           command: |
-            . generator/bin/activate
+            . .venv_gen/bin/activate
             cd generate
             python generate.py
-      - setup_remote_docker:
-          docker_layer_caching: true
+      - persist_to_workspace:
+          root: slate/source
+          paths:
+            - index.html.md
+
+  build-and-push:
+    executor: gcp-gcr/default
+    steps:
+      - attach_workspace:
+          at: /tmp/workspace
+      - checkout
       - run:
-          name: Build and push Docker image 
-          # TODO add push to GC
           command: |
-            cd slate
-            docker build -t $IMAGE_NAME:$TAG .
+            echo $ls
+      - run:
+          name: Replace Slate index.html.md
+          command: |
+            rm slate/source/index.html.md
+            cp /tmp/workspace/index.html.md slate/source/index.html.md
+            cat slate/source/index.html.md
+      - gcp-gcr/gcr-auth
+      - gcp-gcr/build-image:
+          path: slate
+          image: generated_docs_slate
+      - gcp-gcr/push-image:
+          image: generated_docs_slate
 
 workflows:
-  main:
+  commit:
     jobs:
-      - build
+      - generate-documentation
+      - build-and-push:
+          requires:
+            - generate-documentation
