@@ -14,6 +14,10 @@ jobs:
             # Partial cache if changes
             - v1-repo-cache-{{ checksum "generate/config.toml" }}
             - v1-repo-cache-
+      - add_ssh_keys:
+          fingerprints:
+            # - "f3:3f:9d:1d:0b:07:fb:ab:ad:dc:5f:e7:e1:4c:86:b7"  # endpoint-register_phone
+            - "23:e9:f3:52:3a:d3:03:2f:b5:79:1e:e0:21:3e:0d:b8"  # endpoint-send_contacts
       - run:
           name: Setup VirtualEnv for doc generation
           command: |
