@@ -15,6 +15,8 @@ jobs:
             - v1-repo-cache-{{ checksum "generate/config.toml" }}
             - v1-repo-cache-
       - add_ssh_keys:
+          # WARN when adding to circleci project, do not add hostname as will only used a single
+          # https://circleci.com/docs/2.0/add-ssh-key/#adding-multiple-keys-with-blank-hostnames
           fingerprints:
             # - "f3:3f:9d:1d:0b:07:fb:ab:ad:dc:5f:e7:e1:4c:86:b7"  # endpoint-register_phone
             - "23:e9:f3:52:3a:d3:03:2f:b5:79:1e:e0:21:3e:0d:b8"  # endpoint-send_contacts
@@ -41,20 +43,22 @@ jobs:
             - generate/repos
 
   build-and-push:
-    executor: gcp-gcr/default
+    machine:
+      image: circleci/classic:201808-01
+    # docker:
+    #   - image: google/cloud-sdk
     steps:
       - attach_workspace:
           at: /tmp/workspace
       - checkout
-      - run:
-          command: |
-            echo $ls
+      # - setup_remote_docker:
+      #     # version: 18.06.0-ce
+      #     docker_layer_caching: true
       - run:
           name: Replace Slate index.html.md
           command: |
             rm slate/source/index.html.md
             cp /tmp/workspace/index.html.md slate/source/index.html.md
-            cat slate/source/index.html.md
       - gcp-gcr/gcr-auth
       - gcp-gcr/build-image:
           path: slate
