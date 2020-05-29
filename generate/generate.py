@@ -1,13 +1,12 @@
-from os import environ
 from pathlib import Path
+import subprocess
 
-import requests
 import toml
 
 
-GITHUB_PERSONAL_ACCESS_TOKEN = environ['GITHUB_PERSONAL_ACCESS_TOKEN']
 DEFAULT_SEPARATOR = '\n# '
 DEFAULT_IDENTIFIER = 'Endpoints'
+REPO_DIR = 'repos'
 
 
 def generate_slate_readme(config_path: str) -> None:
@@ -45,13 +44,23 @@ def write_to_file(output_path: str, base_path: str, repos: dict) -> None:
             f.write('\n')
 
 
-def get_repo_contents(url: str, path: str) -> str:
-    headers = {'Authorization': f'token {GITHUB_PERSONAL_ACCESS_TOKEN}'}
-    resp = requests.get(f'{url}{path}', headers=headers)
+def get_repo_contents(url, branch, path):
+    repo_name = url.split('/')[-1][:-4]
+    repo_path = Path.cwd() / REPO_DIR / repo_name
 
-    resp.raise_for_status()
+    if not repo_path.exists():
+        subprocess.run(
+            f'git clone --single-branch -b {branch} {url} {str(repo_path)}',
+            shell=True
+        )
+    else:
+        subprocess.run(
+            f'cd {str(repo_path)} && git pull',
+            shell=True
+        )
 
-    return resp.text
+    file_path = repo_path / path
+    return open(file_path, 'r').read()
 
 
 def format_repo_contents(content: str, repo: dict) -> str:
