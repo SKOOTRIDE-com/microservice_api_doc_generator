@@ -9,6 +9,11 @@ jobs:
       - image: circleci/python:3.8.3
     steps:
       - checkout
+      - restore_cache:
+          keys:
+            # Partial cache if changes
+            - v1-repo-cache-{{ checksum "generate/config.toml" }}
+            - v1-repo-cache-
       - run:
           name: Setup VirtualEnv for doc generation
           command: |
@@ -25,6 +30,11 @@ jobs:
           root: slate/source
           paths:
             - index.html.md
+      - save_cache:
+          # regenerates cache if config changes
+          key: v1-repo-cache-{{ checksum "generate/config.toml" }}
+          paths:
+            - generate/repos
 
   build-and-push:
     executor: gcp-gcr/default
