@@ -3,6 +3,7 @@ version: 2.1
 orbs:
   gcp-gcr: circleci/gcp-gcr@0.7.1
 
+
 jobs:
   generate-documentation:
     docker:
@@ -45,15 +46,10 @@ jobs:
   build-and-push:
     machine:
       image: circleci/classic:201808-01
-    # docker:
-    #   - image: google/cloud-sdk
     steps:
       - attach_workspace:
           at: /tmp/workspace
       - checkout
-      # - setup_remote_docker:
-      #     # version: 18.06.0-ce
-      #     docker_layer_caching: true
       - run:
           name: Replace Slate index.html.md
           command: |
@@ -62,9 +58,13 @@ jobs:
       - gcp-gcr/gcr-auth
       - gcp-gcr/build-image:
           path: slate
-          image: generated_docs_slate
-      - gcp-gcr/push-image:
-          image: generated_docs_slate
+          image: docs
+          registry-url: eu.gcr.io
+      - run:
+          name: Docker tag and push
+          command: |
+            docker tag eu.gcr.io/$GOOGLE_PROJECT_ID/docs gcr.io/{$GOOGLE_PROJECT_ID}/docs:prod-$CIRCLECI_BUILD_NUM
+            docker push eu.gcr.io/$GOOGLE_PROJECT_ID/docs:prod-$CIRCLECI_BUILD_NUM
 
 workflows:
   commit:

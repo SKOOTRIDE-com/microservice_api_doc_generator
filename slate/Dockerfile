@@ -1,10 +1,8 @@
-FROM ruby:2.6-slim
+FROM ruby:2.6-slim AS middleman-builder
 
-WORKDIR /srv/slate
+WORKDIR /app
 
-EXPOSE 4567
-
-COPY Gemfile Gemfile.lock /srv/slate/
+COPY Gemfile Gemfile.lock /app/
 
 RUN apt-get update \
     && apt-get install -y --no-install-recommends \
@@ -16,6 +14,9 @@ RUN apt-get update \
     && apt-get autoremove -y \
     && rm -rf /var/lib/apt/lists/*
 
-COPY . /srv/slate
+COPY . /app
+RUN bundle exec middleman build --verbose
 
-CMD ["bundle", "exec", "middleman", "server", "--watcher-force-polling"]
+# Copy the resulting code to the nginx container
+FROM nginx:alpine
+COPY --from=middleman-builder /app/build /usr/share/nginx/html
