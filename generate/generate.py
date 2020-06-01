@@ -38,6 +38,7 @@ def write_to_file(output_path: str, base_path: str, repos: dict) -> None:
             # running job (on CircleCI, for example) will fail.
             # Triggerer should be notified
             content = get_repo_contents(**repo)
+            print(content)
             endpoints = format_repo_contents(content, repo)
 
             f.write(endpoints)
@@ -50,12 +51,22 @@ def get_repo_contents(url, branch, path):
 
     if not repo_path.exists():
         subprocess.run(
-            f'git clone --single-branch -b {branch} {url} {str(repo_path)}',
+            f'git clone {url} {str(repo_path)}',
+            shell=True
+        )
+
+    branch_exists_locally = subprocess.run(
+        f'cd {str(repo_path)} && git show-ref refs/heads/{branch}',
+        shell=True
+    )
+    if branch_exists_locally:
+        subprocess.run(
+            f'cd {str(repo_path)} && git checkout {branch} && git pull',
             shell=True
         )
     else:
         subprocess.run(
-            f'cd {str(repo_path)} && git pull',
+            f'cd {str(repo_path)} && git checkout --track origin/{branch}',
             shell=True
         )
 
