@@ -46,6 +46,7 @@ jobs:
   build-and-push:
     machine:
       image: circleci/classic:201808-01
+      docker_layer_caching: true
     steps:
       - attach_workspace:
           at: /tmp/workspace
@@ -63,7 +64,7 @@ jobs:
       - run:
           name: Docker tag and push
           command: |
-            docker tag eu.gcr.io/$GOOGLE_PROJECT_ID/docs gcr.io/{$GOOGLE_PROJECT_ID}/docs:prod-$CIRCLECI_BUILD_NUM
+            docker tag eu.gcr.io/$GOOGLE_PROJECT_ID/docs gcr.io/$GOOGLE_PROJECT_ID/docs:prod-$CIRCLECI_BUILD_NUM
             docker push eu.gcr.io/$GOOGLE_PROJECT_ID/docs:prod-$CIRCLECI_BUILD_NUM
 
 workflows:
