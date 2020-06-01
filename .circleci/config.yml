@@ -5,7 +5,6 @@ orbs:
 
 
 jobs:
-  # named build to allow trigger with existing github action
   build:
     docker:
       - image: circleci/python:3.8.3

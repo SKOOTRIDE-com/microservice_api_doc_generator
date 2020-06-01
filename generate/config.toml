@@ -3,5 +3,5 @@ base_file_path = "templates/base.template.md"
 
 [[repos]]
 url = "git@github.com:SKOOTUK/endpoint-send_contacts.git"
-branch = "doc-gen-trial"
+branch = "master"
 path = "README.md"
