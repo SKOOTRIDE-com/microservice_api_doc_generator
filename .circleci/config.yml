@@ -5,7 +5,8 @@ orbs:
 
 
 jobs:
-  generate-documentation:
+  # named build to allow trigger with existing github action
+  build:
     docker:
       - image: circleci/python:3.8.3
     steps:
@@ -43,7 +44,7 @@ jobs:
           paths:
             - generate/repos
 
-  build-and-push:
+  docker-build-and-push:
     machine:
       image: circleci/classic:201808-01
       docker_layer_caching: true
@@ -70,7 +71,7 @@ jobs:
 workflows:
   build:
     jobs:
-      - generate-documentation
-      - build-and-push:
+      - build
+      - docker-build-and-push:
           requires:
-            - generate-documentation
+            - build
