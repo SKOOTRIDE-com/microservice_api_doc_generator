@@ -31,19 +31,13 @@ This file is then used by [Slate](https://github.com/slatedocs/slate) to build a
             - master
 
     jobs:
-    build:
+    curl:
         runs-on: ubuntu-latest
-
         steps:
-        - uses: actions/checkout@master
-
-        - name: Trigger doc generation CircleCI job
-            uses: zivkaziv/circleci-trigger-github-action@V1.0
-            with:
-            token: ${{ secrets.circleci_api_token }}
-            org: SKOOTUK
-            repo: microservice_api_doc_generator
-            branch: master
+        - name: curl
+        uses: wei/curl@master
+        with:
+            args: curl -X POST https://circleci.com/api/v1.1/project/github/SKOOTUK/microservice_api_doc_generator/build?circle-token=${{ secrets.circleci_api_token }}
     ```
 
 * Get repo added to `circleci_api_token` on Github organisation secrets
