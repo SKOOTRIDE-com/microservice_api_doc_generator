@@ -19,8 +19,8 @@ jobs:
           # WARN when adding to circleci project, do not add hostname as will only used a single
           # https://circleci.com/docs/2.0/add-ssh-key/#adding-multiple-keys-with-blank-hostnames
           fingerprints:
-            # - "f3:3f:9d:1d:0b:07:fb:ab:ad:dc:5f:e7:e1:4c:86:b7"  # endpoint-register_phone
             - "23:e9:f3:52:3a:d3:03:2f:b5:79:1e:e0:21:3e:0d:b8"  # endpoint-send_contacts
+            - "75:e7:94:1b:80:9e:8d:23:96:13:cc:d5:ba:0e:b0:08"  # endpoint-save_customer_card
       - run:
           name: Setup VirtualEnv for doc generation
           command: |

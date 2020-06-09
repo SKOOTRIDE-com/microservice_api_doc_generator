@@ -5,3 +5,7 @@ base_file_path = "templates/base.template.md"
 url = "git@github.com:SKOOTUK/endpoint-send_contacts.git"
 branch = "master"
 path = "README.md"
+[[repos]]
+url = "git@github.com:SKOOTUK/endpoint-save_customer_card.git"
+branch = "master"
+path = "README.md"
