@@ -9,3 +9,11 @@ path = "README.md"
 url = "git@github.com:SKOOTUK/endpoint-save_customer_card.git"
 branch = "master"
 path = "README.md"
+[[repos]]
+url = "git@github.com:SKOOTUK/endpoint-shared_drives.git"
+branch = "master"
+path = "README.md"
+[[repos]]
+url = "git@github.com:SKOOTUK/endpoint-shared_drive.git"
+branch = "master"
+path = "README.md"
