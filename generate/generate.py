@@ -30,7 +30,7 @@ def generate_slate_readme(config_path: str) -> None:
 
         # Add endpoints base
         endpoints_template = open(config['endpoints_base_file_path'], 'r')
-        f.write(endpoints_template)
+        f.write(endpoints_template.read())
 
         # Add endpoints
         write_to_file(f, config['endpoint_repos'], format_endpoint_repo_contents)
@@ -96,7 +96,7 @@ def format_endpoint_repo_contents(content: str, repo: dict) -> str:
 
 
 def format_whole_readme(content, _repo) -> str:
-    return str(content.strip())
+    return content.strip()
 
 
 if __name__ == '__main__':
