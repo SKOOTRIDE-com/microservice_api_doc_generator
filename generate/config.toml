@@ -1,19 +1,31 @@
 output_file_path = "../slate/source/index.html.md"
 base_file_path = "templates/base.template.md"
+endpoints_base_file_path = "templates/base_endpoints.template.md"
 
-[[repos]]
+
+[[service_repos]]
+url = "git@github.com:SKOOTUK/backend_services.git"
+branch = "master"
+path = "README.md"
+
+
+[[endpoint_repos]]
+url = "git@github.com:SKOOTUK/endpoint-cancel_ride.git"
+branch = "master"
+path = "README.md"
+[[endpoint_repos]]
 url = "git@github.com:SKOOTUK/endpoint-send_contacts.git"
 branch = "master"
 path = "README.md"
-[[repos]]
+[[endpoint_repos]]
 url = "git@github.com:SKOOTUK/endpoint-save_customer_card.git"
 branch = "master"
 path = "README.md"
-[[repos]]
+[[endpoint_repos]]
 url = "git@github.com:SKOOTUK/endpoint-shared_drives.git"
 branch = "master"
 path = "README.md"
-[[repos]]
+[[endpoint_repos]]
 url = "git@github.com:SKOOTUK/endpoint-shared_drive.git"
 branch = "master"
 path = "README.md"

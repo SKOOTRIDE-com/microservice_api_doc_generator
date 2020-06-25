@@ -17,6 +17,3 @@ search: true
 # Introduction
 
 Welcome to Skoot's API documentation.
-
-# APIs
-

@@ -20,29 +20,35 @@ def generate_slate_readme(config_path: str) -> None:
 
     output_file_path = Path.cwd() / config['output_file_path']
 
-    write_to_file(
-        output_file_path,
-        config['base_file_path'],
-        config['repos']
-    )
-
-
-def write_to_file(output_path: str, base_path: str, repos: dict) -> None:
-    base_template = open(base_path, 'r')
-
-    with open(output_path, 'w') as f:
+    with open(output_file_path, 'w') as f:
+        # Add base
+        base_template = open(config['base_file_path'], 'r')
         f.write(base_template.read())
 
-        for repo in repos:
-            # Currently not catching possible errors here so that
-            # running job (on CircleCI, for example) will fail.
-            # Triggerer should be notified
-            content = get_repo_contents(**repo)
-            print(content)
-            endpoints = format_repo_contents(content, repo)
+        # Add services
+        write_to_file(f, config['service_repos'], format_whole_readme)
 
-            f.write(endpoints)
-            f.write('\n')
+        # Add endpoints base
+        endpoints_template = open(config['endpoints_base_file_path'], 'r')
+        f.write(endpoints_template.read())
+
+        # Add endpoints
+        write_to_file(f, config['endpoint_repos'], format_endpoint_repo_contents)
+
+
+def write_to_file(f, repos: list, formatter) -> None:
+    repos.sort(key=lambda repo: repo['url'])
+
+    for repo in repos:
+        # Currently not catching possible errors here so that
+        # running job (on CircleCI, for example) will fail.
+        # Triggerer should be notified
+        content = get_repo_contents(**repo)
+        print(content)
+        endpoints = formatter(content, repo)
+
+        f.write(endpoints)
+        f.write('\n')
 
 
 def get_repo_contents(url, branch, path):
@@ -74,7 +80,7 @@ def get_repo_contents(url, branch, path):
     return open(file_path, 'r').read()
 
 
-def format_repo_contents(content: str, repo: dict) -> str:
+def format_endpoint_repo_contents(content: str, repo: dict) -> str:
     separator = repo.get('section_separator', DEFAULT_SEPARATOR)
     sects = [sect.strip() for sect in content.split(separator)]
 
@@ -87,6 +93,10 @@ def format_repo_contents(content: str, repo: dict) -> str:
     endpoints = endpoints[0]
     first_line_index = endpoints.index('\n')
     return endpoints[first_line_index:].strip()
+
+
+def format_whole_readme(content, _repo) -> str:
+    return content.strip()
 
 
 if __name__ == '__main__':
