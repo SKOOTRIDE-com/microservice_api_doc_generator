@@ -29,3 +29,15 @@ path = "README.md"
 url = "git@github.com:SKOOTUK/endpoint-shared_drive.git"
 branch = "master"
 path = "README.md"
+[[endpoint_repos]]
+url = "git@github.com:SKOOTUK/endpoint-driver_location.git"
+branch = "master"
+path = "README.md"
+[[endpoint_repos]]
+url = "git@github.com:SKOOTUK/endpoint-friend.git"
+branch = "master"
+path = "README.md"
+[[endpoint_repos]]
+url = "git@github.com:SKOOTUK/endpoint-friends.git"
+branch = "master"
+path = "README.md"
