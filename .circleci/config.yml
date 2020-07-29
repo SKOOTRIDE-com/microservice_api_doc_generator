@@ -76,3 +76,7 @@ workflows:
       - docker-build-and-push:
           requires:
             - build
+          filters:
+            branches:
+              only:
+                - master
