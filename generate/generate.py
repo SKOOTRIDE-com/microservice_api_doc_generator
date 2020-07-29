@@ -97,7 +97,7 @@ def format_endpoint_repo_contents(content: str, repo: dict) -> str:
 
 
 def format_whole_readme(content: str, _repo) -> str:
-    return content.strip() + '\n\n'
+    return '\n' + content.strip() + '\n'
 
 
 if __name__ == '__main__':
