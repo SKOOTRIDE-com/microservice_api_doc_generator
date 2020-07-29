@@ -25,8 +25,9 @@ def generate_slate_readme(config_path: str) -> None:
         base_template = open(config['base_file_path'], 'r')
         f.write(base_template.read())
 
-        # Add services
-        write_to_file(f, config['service_repos'], format_whole_readme)
+        # Add repos
+        for repo in config['repos']:
+            write_to_file(f, config[repo], format_whole_readme)
 
         # Add endpoints base
         endpoints_template = open(config['endpoints_base_file_path'], 'r')

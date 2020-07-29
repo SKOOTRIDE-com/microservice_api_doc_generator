@@ -3,6 +3,24 @@ base_file_path = "templates/base.template.md"
 endpoints_base_file_path = "templates/base_endpoints.template.md"
 
 
+repos = [
+    "ios_repo",
+    "android_repo",
+    "service_repos",
+]
+
+[[ios_repo]]
+url = "git@github.com:SKOOTUK/ios.git"
+branch = "master"
+path = "README.md"
+
+
+[[android_repo]]
+url = "git@github.com:SKOOTUK/android.git"
+branch = "master"
+path = "README.md"
+
+
 [[service_repos]]
 url = "git@github.com:SKOOTUK/backend_services.git"
 branch = "master"
