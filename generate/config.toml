@@ -81,7 +81,7 @@ branch = "master"
 path = "README.md"
 [[endpoint_repos]]
 url = "git@github.com:SKOOTUK/endpoint-bank_account.git"
-branch = "update-readme"
+branch = "edit-readme"
 path = "README.md"
 [[endpoint_repos]]
 url = "git@github.com:SKOOTUK/endpoint-choose_driver.git"
