@@ -69,7 +69,7 @@ branch = "master"
 path = "README.md"
 [[endpoint_repos]]
 url = "git@github.com:SKOOTUK/endpoint-coupons.git"
-branch = "master"
+branch = "update-readme"
 path = "README.md"
 [[endpoint_repos]]
 url = "git@github.com:SKOOTUK/endpoint-withdraw.git"
@@ -81,25 +81,25 @@ branch = "master"
 path = "README.md"
 [[endpoint_repos]]
 url = "git@github.com:SKOOTUK/endpoint-bank_account.git"
-branch = "master"
+branch = "update-readme"
 path = "README.md"
 [[endpoint_repos]]
 url = "git@github.com:SKOOTUK/endpoint-choose_driver.git"
-branch = "master"
+branch = "update-readme"
 path = "README.md"
 [[endpoint_repos]]
 url = "git@github.com:SKOOTUK/endpoint-trip_info.git"
 branch = "master"
-path = "README.md"
+branch = "update-readme"
 [[endpoint_repos]]
 url = "git@github.com:SKOOTUK/endpoint-start_ride.git"
 branch = "master"
-path = "README.md"
+branch = "update-readme"
 [[endpoint_repos]]
 url = "git@github.com:SKOOTUK/endpoint-finish_trip.git"
 branch = "master"
-path = "README.md"
+branch = "update-readme"
 [[endpoint_repos]]
 url = "git@github.com:SKOOTUK/endpoint-register_phone.git"
 branch = "master"
-path = "README.md"
+branch = "update-readme"
