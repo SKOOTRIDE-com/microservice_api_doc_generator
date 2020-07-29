@@ -29,3 +29,35 @@ path = "README.md"
 url = "git@github.com:SKOOTUK/endpoint-shared_drive.git"
 branch = "master"
 path = "README.md"
+[[endpoint_repos]]
+url = "git@github.com:SKOOTUK/endpoint-driver_location.git"
+branch = "master"
+path = "README.md"
+[[endpoint_repos]]
+url = "git@github.com:SKOOTUK/endpoint-friends.git"
+branch = "master"
+path = "README.md"
+[[endpoint_repos]]
+url = "git@github.com:SKOOTUK/endpoint-image.git"
+branch = "master"
+path = "README.md"
+[[endpoint_repos]]
+url = "git@github.com:SKOOTUK/endpoint-upload.git"
+branch = "master"
+path = "README.md"
+[[endpoint_repos]]
+url = "git@github.com:SKOOTUK/endpoint-transactions.git"
+branch = "master"
+path = "README.md"
+[[endpoint_repos]]
+url = "git@github.com:SKOOTUK/endpoint-coupons.git"
+branch = "master"
+path = "README.md"
+[[endpoint_repos]]
+url = "git@github.com:SKOOTUK/endpoint-withdraw.git"
+branch = "master"
+path = "README.md"
+[[endpoint_repos]]
+url = "git@github.com:SKOOTUK/endpoint-payment_pending.git"
+branch = "master"
+path = "README.md"
