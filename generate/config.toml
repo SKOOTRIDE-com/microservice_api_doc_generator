@@ -90,12 +90,16 @@ path = "README.md"
 [[endpoint_repos]]
 url = "git@github.com:SKOOTUK/endpoint-trip_info.git"
 branch = "update-readme"
+path = "README.md"
 [[endpoint_repos]]
 url = "git@github.com:SKOOTUK/endpoint-start_ride.git"
 branch = "update-readme"
+path = "README.md"
 [[endpoint_repos]]
 url = "git@github.com:SKOOTUK/endpoint-finish_trip.git"
 branch = "update-readme"
+path = "README.md"
 [[endpoint_repos]]
 url = "git@github.com:SKOOTUK/endpoint-register_phone.git"
 branch = "update-readme"
+path = "README.md"
