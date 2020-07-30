@@ -68,6 +68,11 @@ jobs:
           command: |
             docker tag eu.gcr.io/$GOOGLE_PROJECT_ID/docs eu.gcr.io/$GOOGLE_PROJECT_ID/docs:prod-$CIRCLE_BUILD_NUM
             docker push eu.gcr.io/$GOOGLE_PROJECT_ID/docs:prod-$CIRCLE_BUILD_NUM
+      - run:
+          name: Notify Slack
+          command: |
+            image_name=$(echo "$CIRCLE_PROJECT_REPONAME" | sed 's/-/s\//g')
+            curl -X POST -H 'Content-type: application/json' --data '{"text":"Just pushed: eu.gcr.io/'"${CIRCLE_PROJECT_REPONAME}"'/'"$image_name"':prod-'"${CIRCLE_BUILD_NUM}"'"}' ${SLACK_POST_HOOK_URL}
 
 workflows:
   build:
