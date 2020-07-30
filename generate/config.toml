@@ -32,7 +32,15 @@ url = "git@github.com:SKOOTUK/endpoint-register_phone.git"
 branch = "update-readme"
 path = "README.md"
 [[endpoint_repos]]
+url = "git@github.com:SKOOTUK/endpoint-driver_location.git"
+branch = "master"
+path = "README.md"
+[[endpoint_repos]]
 url = "git@github.com:SKOOTUK/endpoint-start_ride.git"
+branch = "update-readme"
+path = "README.md"
+[[endpoint_repos]]
+url = "git@github.com:SKOOTUK/endpoint-choose_driver.git"
 branch = "update-readme"
 path = "README.md"
 [[endpoint_repos]]
@@ -48,22 +56,6 @@ url = "git@github.com:SKOOTUK/endpoint-cancel_ride.git"
 branch = "master"
 path = "README.md"
 [[endpoint_repos]]
-url = "git@github.com:SKOOTUK/endpoint-send_contacts.git"
-branch = "master"
-path = "README.md"
-[[endpoint_repos]]
-url = "git@github.com:SKOOTUK/endpoint-friends.git"
-branch = "master"
-path = "README.md"
-[[endpoint_repos]]
-url = "git@github.com:SKOOTUK/endpoint-choose_driver.git"
-branch = "update-readme"
-path = "README.md"
-[[endpoint_repos]]
-url = "git@github.com:SKOOTUK/endpoint-driver_location.git"
-branch = "master"
-path = "README.md"
-[[endpoint_repos]]
 url = "git@github.com:SKOOTUK/endpoint-shared_drive.git"
 branch = "master"
 path = "README.md"
@@ -76,6 +68,10 @@ url = "git@github.com:SKOOTUK/endpoint-transactions.git"
 branch = "master"
 path = "README.md"
 [[endpoint_repos]]
+url = "git@github.com:SKOOTUK/endpoint-save_customer_card.git"
+branch = "master"
+path = "README.md"
+[[endpoint_repos]]
 url = "git@github.com:SKOOTUK/endpoint-coupons.git"
 branch = "update-readme"
 path = "README.md"
@@ -84,15 +80,19 @@ url = "git@github.com:SKOOTUK/endpoint-payment_pending.git"
 branch = "master"
 path = "README.md"
 [[endpoint_repos]]
-url = "git@github.com:SKOOTUK/endpoint-save_customer_card.git"
-branch = "master"
-path = "README.md"
-[[endpoint_repos]]
 url = "git@github.com:SKOOTUK/endpoint-bank_account.git"
 branch = "edit-readme"
 path = "README.md"
 [[endpoint_repos]]
 url = "git@github.com:SKOOTUK/endpoint-withdraw.git"
+branch = "master"
+path = "README.md"
+[[endpoint_repos]]
+url = "git@github.com:SKOOTUK/endpoint-send_contacts.git"
+branch = "master"
+path = "README.md"
+[[endpoint_repos]]
+url = "git@github.com:SKOOTUK/endpoint-friends.git"
 branch = "master"
 path = "README.md"
 [[endpoint_repos]]
