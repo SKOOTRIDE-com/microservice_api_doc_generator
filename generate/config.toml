@@ -7,6 +7,7 @@ repos = [
 "ios_repo",
 "android_repo",
 "service_repos",
+"testing_repo",
 ]
 
 [[ios_repo]]
@@ -20,6 +21,10 @@ url = "git@github.com:SKOOTUK/android.git"
 branch = "master"
 path = "README.md"
 
+[[testing_repo]]
+url = "git@github.com:SKOOTUK/mobile_acceptance_testing.git"
+branch = "master"
+path = "README.md"
 
 [[service_repos]]
 url = "git@github.com:SKOOTUK/backend_services.git"
