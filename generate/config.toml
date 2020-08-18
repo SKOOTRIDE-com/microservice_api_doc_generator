@@ -4,9 +4,10 @@ endpoints_base_file_path = "templates/base_endpoints.template.md"
 
 
 repos = [
-    "ios_repo",
-    "android_repo",
-    "service_repos",
+"ios_repo",
+"android_repo",
+"testing_repo",
+"service_repos",
 ]
 
 [[ios_repo]]
@@ -20,6 +21,10 @@ url = "git@github.com:SKOOTUK/android.git"
 branch = "master"
 path = "README.md"
 
+[[testing_repo]]
+url = "git@github.com:SKOOTUK/mobile_acceptance_testing.git"
+branch = "master"
+path = "README.md"
 
 [[service_repos]]
 url = "git@github.com:SKOOTUK/backend_services.git"
@@ -28,19 +33,43 @@ path = "README.md"
 
 
 [[endpoint_repos]]
+url = "git@github.com:SKOOTUK/endpoint-register_phone.git"
+branch = "master"
+path = "README.md"
+[[endpoint_repos]]
+url = "git@github.com:SKOOTUK/endpoint-login.git"
+branch = "master"
+path = "README.md"
+[[endpoint_repos]]
+url = "git@github.com:SKOOTUK/endpoint-licence.git"
+branch = "master"
+path = "README.md"
+[[endpoint_repos]]
+url = "git@github.com:SKOOTUK/endpoint-driver_location.git"
+branch = "master"
+path = "README.md"
+[[endpoint_repos]]
+url = "git@github.com:SKOOTUK/endpoint-cars.git"
+branch = "master"
+path = "README.md"
+[[endpoint_repos]]
+url = "git@github.com:SKOOTUK/endpoint-start_ride.git"
+branch = "master"
+path = "README.md"
+[[endpoint_repos]]
+url = "git@github.com:SKOOTUK/endpoint-choose_driver.git"
+branch = "master"
+path = "README.md"
+[[endpoint_repos]]
+url = "git@github.com:SKOOTUK/endpoint-trip_info.git"
+branch = "master"
+path = "README.md"
+[[endpoint_repos]]
+url = "git@github.com:SKOOTUK/endpoint-finish_trip.git"
+branch = "master"
+path = "README.md"
+[[endpoint_repos]]
 url = "git@github.com:SKOOTUK/endpoint-cancel_ride.git"
-branch = "master"
-path = "README.md"
-[[endpoint_repos]]
-url = "git@github.com:SKOOTUK/endpoint-send_contacts.git"
-branch = "master"
-path = "README.md"
-[[endpoint_repos]]
-url = "git@github.com:SKOOTUK/endpoint-save_customer_card.git"
-branch = "master"
-path = "README.md"
-[[endpoint_repos]]
-url = "git@github.com:SKOOTUK/endpoint-shared_drives.git"
 branch = "master"
 path = "README.md"
 [[endpoint_repos]]
@@ -48,7 +77,35 @@ url = "git@github.com:SKOOTUK/endpoint-shared_drive.git"
 branch = "master"
 path = "README.md"
 [[endpoint_repos]]
-url = "git@github.com:SKOOTUK/endpoint-driver_location.git"
+url = "git@github.com:SKOOTUK/endpoint-shared_drives.git"
+branch = "master"
+path = "README.md"
+[[endpoint_repos]]
+url = "git@github.com:SKOOTUK/endpoint-transactions.git"
+branch = "master"
+path = "README.md"
+[[endpoint_repos]]
+url = "git@github.com:SKOOTUK/endpoint-save_customer_card.git"
+branch = "master"
+path = "README.md"
+[[endpoint_repos]]
+url = "git@github.com:SKOOTUK/endpoint-coupons.git"
+branch = "master"
+path = "README.md"
+[[endpoint_repos]]
+url = "git@github.com:SKOOTUK/endpoint-payment_pending.git"
+branch = "master"
+path = "README.md"
+[[endpoint_repos]]
+url = "git@github.com:SKOOTUK/endpoint-bank_account.git"
+branch = "master"
+path = "README.md"
+[[endpoint_repos]]
+url = "git@github.com:SKOOTUK/endpoint-withdraw.git"
+branch = "master"
+path = "README.md"
+[[endpoint_repos]]
+url = "git@github.com:SKOOTUK/endpoint-send_contacts.git"
 branch = "master"
 path = "README.md"
 [[endpoint_repos]]
@@ -61,21 +118,5 @@ branch = "master"
 path = "README.md"
 [[endpoint_repos]]
 url = "git@github.com:SKOOTUK/endpoint-upload.git"
-branch = "master"
-path = "README.md"
-[[endpoint_repos]]
-url = "git@github.com:SKOOTUK/endpoint-transactions.git"
-branch = "master"
-path = "README.md"
-[[endpoint_repos]]
-url = "git@github.com:SKOOTUK/endpoint-coupons.git"
-branch = "master"
-path = "README.md"
-[[endpoint_repos]]
-url = "git@github.com:SKOOTUK/endpoint-withdraw.git"
-branch = "master"
-path = "README.md"
-[[endpoint_repos]]
-url = "git@github.com:SKOOTUK/endpoint-payment_pending.git"
 branch = "master"
 path = "README.md"
