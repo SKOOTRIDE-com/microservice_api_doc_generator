@@ -6,8 +6,8 @@ endpoints_base_file_path = "templates/base_endpoints.template.md"
 repos = [
 "ios_repo",
 "android_repo",
-"service_repos",
 "testing_repo",
+"service_repos",
 ]
 
 [[ios_repo]]
