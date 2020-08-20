@@ -93,6 +93,10 @@ url = "git@github.com:SKOOTUK/endpoint-coupons.git"
 branch = "master"
 path = "README.md"
 [[endpoint_repos]]
+url = "git@github.com:SKOOTUK/endpoint-rewards.git"
+branch = "master"
+path = "README.md"
+[[endpoint_repos]]
 url = "git@github.com:SKOOTUK/endpoint-payment_pending.git"
 branch = "master"
 path = "README.md"
