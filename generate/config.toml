@@ -41,6 +41,10 @@ url = "git@github.com:SKOOTUK/endpoint-login.git"
 branch = "master"
 path = "README.md"
 [[endpoint_repos]]
+url = "git@github.com:SKOOTUK/endpoint-notify_token.git"
+branch = "master"
+path = "README.md"
+[[endpoint_repos]]
 url = "git@github.com:SKOOTUK/endpoint-licence.git"
 branch = "master"
 path = "README.md"
