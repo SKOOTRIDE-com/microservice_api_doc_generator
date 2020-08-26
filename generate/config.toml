@@ -53,6 +53,10 @@ url = "git@github.com:SKOOTUK/endpoint-driver_location.git"
 branch = "master"
 path = "README.md"
 [[endpoint_repos]]
+url = "git@github.com:SKOOTUK/endpoint-check_for_drivers.git"
+branch = "master"
+path = "README.md"
+[[endpoint_repos]]
 url = "git@github.com:SKOOTUK/endpoint-cars.git"
 branch = "master"
 path = "README.md"
