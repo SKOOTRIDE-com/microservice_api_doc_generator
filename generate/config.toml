@@ -30,6 +30,10 @@ path = "README.md"
 url = "git@github.com:SKOOTUK/backend_services.git"
 branch = "master"
 path = "README.md"
+[[service_repos]]
+url = "git@github.com:SKOOTUK/event_handlers.git"
+branch = "master"
+path = "README.md"
 
 
 [[endpoint_repos]]
@@ -49,11 +53,19 @@ url = "git@github.com:SKOOTUK/endpoint-licence.git"
 branch = "master"
 path = "README.md"
 [[endpoint_repos]]
+url = "git@github.com:SKOOTUK/endpoint-send_plate_number.git"
+branch = "master"
+path = "README.md"
+[[endpoint_repos]]
 url = "git@github.com:SKOOTUK/endpoint-driver_location.git"
 branch = "master"
 path = "README.md"
 [[endpoint_repos]]
 url = "git@github.com:SKOOTUK/endpoint-check_for_drivers.git"
+branch = "master"
+path = "README.md"
+[[endpoint_repos]]
+url = "git@github.com:SKOOTUK/endpoint-decide_ride.git"
 branch = "master"
 path = "README.md"
 [[endpoint_repos]]
