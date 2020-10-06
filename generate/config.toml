@@ -45,6 +45,14 @@ url = "git@github.com:SKOOTUK/endpoint-login.git"
 branch = "master"
 path = "README.md"
 [[endpoint_repos]]
+url = "git@github.com:SKOOTUK/edit_profile.git"
+branch = "master"
+path = "README.md"
+[[endpoint_repos]]
+url = "git@github.com:SKOOTUK/check_phone_code.git"
+branch = "master"
+path = "README.md"
+[[endpoint_repos]]
 url = "git@github.com:SKOOTUK/endpoint-notify_token.git"
 branch = "master"
 path = "README.md"
@@ -85,6 +93,10 @@ url = "git@github.com:SKOOTUK/endpoint-trip_info.git"
 branch = "master"
 path = "README.md"
 [[endpoint_repos]]
+url = "git@github.com:SKOOTUK/calculate_fees.git"
+branch = "master"
+path = "README.md"
+[[endpoint_repos]]
 url = "git@github.com:SKOOTUK/endpoint-finish_trip.git"
 branch = "master"
 path = "README.md"
@@ -110,6 +122,10 @@ branch = "master"
 path = "README.md"
 [[endpoint_repos]]
 url = "git@github.com:SKOOTUK/endpoint-coupons.git"
+branch = "master"
+path = "README.md"
+[[endpoint_repos]]
+url = "git@github.com:SKOOTUK/webhook-coupons.git"
 branch = "master"
 path = "README.md"
 [[endpoint_repos]]
