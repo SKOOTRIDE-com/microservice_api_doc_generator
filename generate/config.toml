@@ -45,11 +45,11 @@ url = "git@github.com:SKOOTUK/endpoint-login.git"
 branch = "master"
 path = "README.md"
 [[endpoint_repos]]
-url = "git@github.com:SKOOTUK/edit_profile.git"
+url = "git@github.com:SKOOTUK/endpoint-edit_profile.git"
 branch = "master"
 path = "README.md"
 [[endpoint_repos]]
-url = "git@github.com:SKOOTUK/check_phone_code.git"
+url = "git@github.com:SKOOTUK/endpoint-check_phone_code.git"
 branch = "master"
 path = "README.md"
 [[endpoint_repos]]
@@ -93,7 +93,7 @@ url = "git@github.com:SKOOTUK/endpoint-trip_info.git"
 branch = "master"
 path = "README.md"
 [[endpoint_repos]]
-url = "git@github.com:SKOOTUK/calculate_fees.git"
+url = "git@github.com:SKOOTUK/endpoint-calculate_fees.git"
 branch = "master"
 path = "README.md"
 [[endpoint_repos]]
