@@ -20,7 +20,7 @@ jobs:
           # https://circleci.com/docs/2.0/add-ssh-key/#adding-multiple-keys-with-blank-hostnames
           fingerprints:
             - "23:e9:f3:52:3a:d3:03:2f:b5:79:1e:e0:21:3e:0d:b8"  # endpoint-send_contacts
-            - "75:e7:94:1b:80:9e:8d:23:96:13:cc:d5:ba:0e:b0:08"  # endpoint-save_customer_card
+            - "75:e7:94:1b:80:9e:8d:23:96:13:cc:d5:ba:0e:b0:08"  # endpoint-cards
             - "43:90:55:ce:53:e2:61:73:22:74:fa:5a:79:30:08:b1"  # endpoint-shared_drives
             - "0c:c7:19:ac:78:30:6a:9d:40:f7:79:98:f0:b4:84:8b"  # endpoint-shared_drive
       - run:

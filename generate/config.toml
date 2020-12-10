@@ -125,7 +125,7 @@ url = "git@github.com:SKOOTUK/endpoint-transactions.git"
 branch = "master"
 path = "README.md"
 [[endpoint_repos]]
-url = "git@github.com:SKOOTUK/endpoint-save_customer_card.git"
+url = "git@github.com:SKOOTUK/endpoint-cards.git"
 branch = "master"
 path = "README.md"
 [[endpoint_repos]]
