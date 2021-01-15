@@ -168,3 +168,11 @@ path = "README.md"
 url = "git@github.com:SKOOTUK/endpoint-upload.git"
 branch = "master"
 path = "README.md"
+[[endpoint_repos]]
+url = "git@github.com:SKOOTUK/endpoint-trip.git"
+branch = "main"
+path = "README.md"
+[[endpoint_repos]]
+url = "git@github.com:SKOOTUK/endpoint-profile.git"
+branch = "main"
+path = "README.md"
