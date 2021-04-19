@@ -37,6 +37,22 @@ path = "README.md"
 
 
 [[endpoint_repos]]
+url = "git@github.com:SKOOTUK/auth-register.git
+branch = "main"
+path = "README.md"
+[[endpoint_repos]]
+url = "git@github.com:SKOOTUK/auth-verify.git
+branch = "main"
+path = "README.md"
+[[endpoint_repos]]
+url = "git@github.com:SKOOTUK/auth-refresh.git
+branch = "main"
+path = "README.md"
+[[endpoint_repos]]
+url = "git@github.com:SKOOTUK/auth-upgrade.git
+branch = "main"
+path = "README.md"
+[[endpoint_repos]]
 url = "git@github.com:SKOOTUK/endpoint-register_phone.git"
 branch = "master"
 path = "README.md"
