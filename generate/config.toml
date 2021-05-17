@@ -189,6 +189,10 @@ url = "git@github.com:SKOOTUK/endpoint-trip.git"
 branch = "main"
 path = "README.md"
 [[endpoint_repos]]
+url = "git@github.com:SKOOTUK/endpoint-trips.git"
+branch = "main"
+path = "README.md"
+[[endpoint_repos]]
 url = "git@github.com:SKOOTUK/endpoint-profile.git"
 branch = "main"
 path = "README.md"
