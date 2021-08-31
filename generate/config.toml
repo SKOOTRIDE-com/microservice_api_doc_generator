@@ -57,19 +57,7 @@ url = "git@github.com:SKOOTUK/endpoint-register_phone.git"
 branch = "master"
 path = "README.md"
 [[endpoint_repos]]
-url = "git@github.com:SKOOTUK/endpoint-login.git"
-branch = "master"
-path = "README.md"
-[[endpoint_repos]]
-url = "git@github.com:SKOOTUK/endpoint-edit_profile.git"
-branch = "master"
-path = "README.md"
-[[endpoint_repos]]
 url = "git@github.com:SKOOTUK/endpoint-check_phone_code.git"
-branch = "master"
-path = "README.md"
-[[endpoint_repos]]
-url = "git@github.com:SKOOTUK/endpoint-notify_token.git"
 branch = "master"
 path = "README.md"
 [[endpoint_repos]]
@@ -141,6 +129,10 @@ url = "git@github.com:SKOOTUK/endpoint-transactions.git"
 branch = "master"
 path = "README.md"
 [[endpoint_repos]]
+url = "git@github.com:SKOOTUK/endpoint-card.git"
+branch = "master"
+path = "README.md"
+[[endpoint_repos]]
 url = "git@github.com:SKOOTUK/endpoint-cards.git"
 branch = "master"
 path = "README.md"
@@ -194,6 +186,10 @@ branch = "main"
 path = "README.md"
 [[endpoint_repos]]
 url = "git@github.com:SKOOTUK/endpoint-profile.git"
+branch = "main"
+path = "README.md"
+[[endpoint_repos]]
+url = "git@github.com:SKOOTUK/endpoint-profiles.git"
 branch = "main"
 path = "README.md"
 [[endpoint_repos]]
