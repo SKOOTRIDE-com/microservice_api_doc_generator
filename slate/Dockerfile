@@ -1,4 +1,4 @@
-FROM ruby:2.6-slim AS middleman-builder
+FROM ruby:3.1.2-slim AS middleman-builder
 
 WORKDIR /app
 
